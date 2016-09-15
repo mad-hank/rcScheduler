@@ -16,9 +16,9 @@ namespace Scheduler
                 var List = File.ReadAllLines(Path);
                 Console.WriteLine("Total days so far : {0}", List.Count());
                 SortedDictionary<DateTime, string> Modules = new SortedDictionary<DateTime, string>();
-                foreach (var itemc in List)
+                foreach (var item in List)
                 {
-                    var dateval = itemc.Split(':').ToList();
+                    var dateval = item.Split(':').ToList();
                     DateTime Date;
 
                     if (DateTime.TryParse(dateval[0], out Date))
